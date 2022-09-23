@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+
+.Menu{
+    padding-top:50px;
+    height:80px;
+    background-color: #1d1d1fbd;
+    display: flex;
+    justify-content: space-between;
+}
+.Logo{
+color:white;
+margin-left: 500px;;
+font-size: 15px;
+display: flex;
+font-family: 'Inter', sans-serif;
+font-weight: lighter;
+
+}
+.Logo p{
+    padding-top:12px;
+    font-weight: bold;
+}
+
+.Tittle{
+    color:white;
+    display: flex;
+    margin-right:600px;
+    list-style: none;
+    gap:80px;
+    font-size:23px;
+    font-weight: bold;
+    font-family: 'Inter' 'Sans-serif';
+}
+.Tittle a{
+    color: white;
+   text-decoration: none;
+}
+link{
+    color:white;
+}
