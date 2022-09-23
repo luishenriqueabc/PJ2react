@@ -1,0 +1,40 @@
+.Tudo{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1d1d1fbd;
+    padding-bottom: 180px;
+    margin-bottom:5px;
+
+}
+.Esquerdo p{
+    width: 250px;
+    text-align:left;
+    font-size:20px;
+    padding-top:60px;
+    padding-bottom:30px;
+    color:white;
+}
+.Esquerdo h1{
+    color:white;
+}
+.Direito p{
+    width: 250px;
+    text-align:left;
+    font-size:20px;
+    padding-top:60px;
+    padding-bottom:30px;
+    color:white;
+}
+.Direito h1{
+    color:white;
+}
+.Direito h2{
+    color:white;
+  
+}
+.Esquerdo{
+    padding-left: 450px;
+}
+.Direito{
+    padding-right: 450px;
+}

@@ -3,14 +3,14 @@
     padding:0;
 }
 
-
-
 .Menu{
     padding-top:50px;
-    height:80px;
+    height:450px;
     background-color: #1d1d1fbd;
     display: flex;
     justify-content: space-between;
+    text-align: center;
+  
 }
 .Logo{
 color:white;
@@ -22,8 +22,11 @@ font-weight: lighter;
 
 }
 .Logo p{
-    padding-top:12px;
+    padding-top:19px;
     font-weight: bold;
+}
+.Logo h1{
+    font-weight: lighter;
 }
 
 .Tittle{
@@ -32,14 +35,10 @@ font-weight: lighter;
     margin-right:600px;
     list-style: none;
     gap:80px;
-    font-size:23px;
+    font-size:30px;
     font-weight: bold;
     font-family: 'Inter' 'Sans-serif';
 }
-.Tittle a{
-    color: white;
-   text-decoration: none;
-}
-link{
-    color:white;
+.Tittle li{
+    font-weight: lighter;
 }
