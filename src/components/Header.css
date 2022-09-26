@@ -13,17 +13,20 @@
   
 }
 .Logo{
-color:white;
-margin-left: 500px;;
-font-size: 15px;
-display: flex;
-font-family: 'Inter', sans-serif;
-font-weight: lighter;
-
+    color:white;
+    margin-left: 500px;;
+    font-size: 15px;
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    font-weight: lighter;
+}
+.Logo:hover{
+    cursor:pointer;
 }
 .Logo p{
     padding-top:19px;
     font-weight: bold;
+  
 }
 .Logo h1{
     font-weight: lighter;
@@ -41,4 +44,6 @@ font-weight: lighter;
 }
 .Tittle li{
     font-weight: lighter;
+    cursor: pointer;
 }
+

@@ -1,7 +1,8 @@
 import './LandiPage.css'
 import Button from 'react-bootstrap/Button';
-
+import { useNavigate } from 'react-router-dom';
 const LandiPage = () =>{
+    const Navigate = useNavigate()
     return(
         <>
         <div className="Tudo">
@@ -10,9 +11,9 @@ const LandiPage = () =>{
                 <p>Feito para comerciantes com intuito de facilitar o processo de contabilidade entre investimentos e lucros.</p>
         <>
         <div className="mb-2">
-            <Button variant="danger" size="lg">
+            <Button  onClick={() => Navigate('/Contas')} variant="danger" size="lg">
             Testar
-            </Button>{' '}
+            </Button >{' '}
         </div>
         </>
         </div>
