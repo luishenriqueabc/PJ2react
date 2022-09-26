@@ -1,6 +1,6 @@
-
+import './Formulario.css';
 import {useRef,useEffect} from 'react';
-import { Placeholder } from 'react-bootstrap';
+
 
 
 const Formulario = ({produto, setProduto}) => {
@@ -21,7 +21,7 @@ const Formulario = ({produto, setProduto}) => {
     formData.append('investimento', event.target[2].value)
     formData.append('preco', event.target[3].value);
     fetch(
-        "http://localhost/api/produto/create",
+        "http://localhost/pj2/api/produto/create",
         {method: 'POST', body: formData}
         )
         .then((response) => response.json())
@@ -37,7 +37,7 @@ const Formulario = ({produto, setProduto}) => {
     } 
 
     return(
-
+ <div className="Designer">
     <form className='Formulario' onSubmit={(event) => handleSubmit(event)}>
     <input placeholder='Nome do Produto:' ref={nomeRef} type="text" name="nome"/>
     <input placeholder='Quantidade do Produto:' ref={quantidadeRef} type="text" name="quantidade"/>
@@ -45,6 +45,7 @@ const Formulario = ({produto, setProduto}) => {
     <input placeholder='Preço a ser vendido:' ref={precoRef} type="text" name="preco"/>
     <input type="submit" value="Enviar"  style={{cursor: 'pointer',  color:'white',backgroundColor:'black'}}/>
     </form>
+    </div>
 
     );
 };

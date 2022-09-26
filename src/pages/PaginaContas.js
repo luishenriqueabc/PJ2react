@@ -1,12 +1,23 @@
 import './PaginaContas.css';
-// import {useRef,useEffect} from 'react';
-// import { Placeholder } from 'react-bootstrap';
+import {useState, useEffect} from 'react';
 import Formulario from '../components/Formulario';
 
-
 const PaginaContas = () => {
-return(
-    <Formulario />
-);
-};
+    const [produto, setProduto] = useState(null);
+    useEffect(() => {
+    fetch("http://localhost/pj2/api/produto/select-all")
+    .then((response) => response.json())
+    .then((data) => setProduto(data));        
+    }, [])
+    {produto &&
+        produto.map((produto) => {
+        return (
+            <>
+              <Formulario />
+            </>
+           
+              )
+            })
+          };
+        }
 export default PaginaContas;

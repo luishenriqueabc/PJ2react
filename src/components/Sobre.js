@@ -24,8 +24,8 @@ const Sobre = () =>{
             </div>
             <div className="card__giratorio-conteudo--traseira">
         <h1>Luis Henrique</h1>
-        <p>Progamador Web e Mobile</p>
-        <p>Gestor</p>
+        <p>Progamador Web e Mobile.</p>
+        <p>Gestor.</p>
             </div>
         </div>
     </div>
