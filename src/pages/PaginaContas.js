@@ -52,18 +52,38 @@ const [lucro, setLucro] = useState()
       });
   }
   return (
+    <>
+
     <div className="Formulario">
-     <h1>Cálculo de Lucros</h1>
-     <form onSubmit={(event) => handleSubmit(event)}>
-      <input placeholder='Nome' id='nome' type="text" ref={nomeRef}/>
-      <input placeholder='Quantidade' id='quant' type="number" ref={quantidadeRef}/>
-      <input placeholder='Valor Sugerido' id='valor' type="text" ref={precoRef}/>
-      <input placeholder='Investimento' id='invest' type="text" ref={investimentoRef}/>
-      <input placeholder='Calcular' type="submit" id='btn'/>
-     </form>
-      <p>Lucro: {lucro}</p>
+     <h1 className='Titulo'>Cálculo de Lucros</h1>
+
+     <div className='Separador'>
+      <p className='Cifrao'>R$ <br /><br />
+      <spam>R$</spam></p>
       
-    </div>
+     <form onSubmit={(event) => handleSubmit(event)}>
+       <h2 className='Nome'>Nome</h2>
+      <input id='nome' type="text" ref={nomeRef}/>
+      <h2 className='Quant'>Quantidade</h2>
+      <input id='quant' type="number" ref={quantidadeRef}/>
+      <h2 className='Preco'>Preço</h2>
+      <input id='valor' type="text" ref={precoRef}/>
+      <h2 className='Invest'>Investimento</h2>
+      <input id='invest' type="text" ref={investimentoRef}/>
+      <div className='Botao'>
+      <input value='Calcular' type="submit" id='btn' />
+
+      </div>
+
+     </form>
+     <div className='Resultado'>
+      <h3 className='Lucro'>Lucro Total</h3>
+      <p>{lucro}</p>
+      </div>
+     </div>
+      </div>
+    </>
+
   );
 }
 export default Contas;
