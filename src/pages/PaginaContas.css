@@ -8,7 +8,7 @@
     text-align: center;
     align-items: center;
     padding-top: 200px;
-    padding-right: 80px;
+    padding-right: 40px;
 }
 .Formulario h1{
     color: white;
@@ -40,6 +40,7 @@ input::Placeholder{
 input{
     border:0;
     font-size:30px;
+    padding-left: 10px;;
 }
 .Botao input {
    font-size:20px;
@@ -62,19 +63,37 @@ input{
     padding-right:115px;
 }
 Form{
-  margin-right: 300px;
+  margin-right: 100px;
 }
 .Lucro{
     padding-right:500px;;
 }
 .Cifrao{
-    padding-left:500px;
+    padding-left:50px;
     padding-top: 245px;;
     font-size:35px;
     padding-right: 10px;;
     color: white;
     font-weight: bold;
     font-family: 'Inter' 'Sans-serif';
+}
+.Resultado{
+background-color: rgba(0, 0, 0, 0.295);
+border-radius: 50px;
+width:800px;
+height:400px;
+margin-top:30px;
+}
+
+.Resultado h3{
+    color:white;
+    font-size:50px;
+    padding-top:50px;
+}
+.Resultado p{
+    color:white;
+    font-size:50px;
+    padding-top:50px;
 }
 
 

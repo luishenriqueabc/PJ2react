@@ -1,9 +1,10 @@
 import {useRef, useState} from 'react'
 import './PaginaContas.css';
 
-const Contas = () => {
 
+const Contas = () => {
 const [lucro, setLucro] = useState()
+
 
   let nomeRef = useRef();
   let quantidadeRef = useRef();
@@ -11,8 +12,13 @@ const [lucro, setLucro] = useState()
   let investimentoRef = useRef();
  
 
+ 
   const handleSubmit = (event) => {
     event.preventDefault()
+
+
+   
+
 
     let nome = event.target[0].value
     let quantidade = event.target[1].value
@@ -21,12 +27,13 @@ const [lucro, setLucro] = useState()
 
     let valorTotal = quantidade * preco
     let calculoLucro = valorTotal - investimento
-
+    
     let mensage = `O ${nome}, teve ${calculoLucro} de Lucro`
+    let Decimais = calculoLucro.toLocaleString('pt-BR')
 
     console.log(mensage)
-
-    setLucro(calculoLucro)
+    
+    setLucro(Decimais)
 
     const formData = new FormData();
     formData.append('nome', event.target[0].value);
@@ -61,7 +68,7 @@ const [lucro, setLucro] = useState()
       <p className='Cifrao'>R$ <br /><br />
       <spam>R$</spam></p>
       
-     <form onSubmit={(event) => handleSubmit(event)}>
+     <form className="Form" onSubmit={(event) => handleSubmit(event)}>
        <h2 className='Nome'>Nome</h2>
       <input id='nome' type="text" ref={nomeRef}/>
       <h2 className='Quant'>Quantidade</h2>
@@ -72,18 +79,19 @@ const [lucro, setLucro] = useState()
       <input id='invest' type="text" ref={investimentoRef}/>
       <div className='Botao'>
       <input value='Calcular' type="submit" id='btn' />
-
       </div>
+   
 
      </form>
      <div className='Resultado'>
-      <h3 className='Lucro'>Lucro Total</h3>
-      <p>{lucro}</p>
+      <h3>Lucro Total</h3>
+      <p>R$ {lucro}</p>
       </div>
+    
      </div>
+     
       </div>
     </>
-
   );
 }
 export default Contas;
