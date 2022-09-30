@@ -1,9 +1,17 @@
-import {useRef, useState} from 'react'
 import './PaginaContas.css';
+import {useRef, useState} from 'react'
+import {BiArrowBack} from 'react-icons/bi'
+import { useNavigate } from 'react-router-dom';
+
 
 
 const Contas = () => {
 const [lucro, setLucro] = useState()
+const [valortotal, setValor] = useState()
+
+const Navigate = useNavigate();
+
+
 
 
   let nomeRef = useRef();
@@ -29,12 +37,15 @@ const [lucro, setLucro] = useState()
     let calculoLucro = valorTotal - investimento
   
     
-    let mensage = `O ${nome}, teve ${calculoLucro} de Lucro`
+    let mensage = `O ${nome}, teve um valor total de R$${valorTotal}  e um lucro de R$${calculoLucro}`
     let Decimais = calculoLucro.toLocaleString('pt-BR')
+    let EmReais =  valorTotal.toLocaleString('pt-BR')
+  
 
     console.log(mensage)
     
     setLucro(Decimais)
+    setValor(EmReais)
 
     const formData = new FormData();
     formData.append('nome', event.target[0].value);
@@ -42,6 +53,7 @@ const [lucro, setLucro] = useState()
     formData.append('preco', event.target[2].value);
     formData.append('investimento', event.target[3].value);
     formData.append('lucro', calculoLucro);
+    formData.append('valortotal', valorTotal);
 
     fetch(
       "http://localhost/pj2/api/produto/create",
@@ -63,6 +75,9 @@ const [lucro, setLucro] = useState()
     <>
 
     <div className="Formulario">
+    <div className="VoltarContas">
+        <p onClick={() => Navigate('/Home')}><BiArrowBack /></p>
+        </div>
      <h1 className='Titulo'>Cálculo de Lucros</h1>
 
      <div className='Separador'>
@@ -78,15 +93,20 @@ const [lucro, setLucro] = useState()
       <input id='valor' type="text" ref={precoRef}/>
       <h2 className='Invest'>Investimento</h2>
       <input id='invest' type="text" ref={investimentoRef}/>
-      <div className='Botao'>
+      <div className='Botao '>
       <input value='Calcular' type="submit" id='btn' />
       </div>
    
 
      </form>
      <div className='Resultado'>
-      <h3>Lucro Total</h3>
+      <h3>Retorno Total</h3>
+      <p>R$ {valortotal}</p>
+      <h3>Lucro</h3>
       <p>R$ {lucro}</p>
+      
+      
+
   
 
       </div>

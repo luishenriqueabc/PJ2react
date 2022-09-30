@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import Sobre from '../components/Sobre';
 import './PaginaSobre.css';
-import {BiArrowBack} from 'react-icons/bi'
+import {BiArrowBack} from 'react-icons/bi';
 
 const PaginaSobre = () =>{
     const Navigate = useNavigate();
