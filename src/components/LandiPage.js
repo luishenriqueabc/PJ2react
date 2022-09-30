@@ -12,7 +12,7 @@ const LandiPage = () =>{
         <>
         <div className="mb-2">
             <Button  onClick={() => Navigate('/Contas')} variant="danger" size="lg">
-            Testar
+            Calcular Lucro
             </Button >{' '}
         </div>
         </>

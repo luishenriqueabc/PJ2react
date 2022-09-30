@@ -27,6 +27,7 @@ const [lucro, setLucro] = useState()
 
     let valorTotal = quantidade * preco
     let calculoLucro = valorTotal - investimento
+  
     
     let mensage = `O ${nome}, teve ${calculoLucro} de Lucro`
     let Decimais = calculoLucro.toLocaleString('pt-BR')
@@ -86,6 +87,8 @@ const [lucro, setLucro] = useState()
      <div className='Resultado'>
       <h3>Lucro Total</h3>
       <p>R$ {lucro}</p>
+  
+
       </div>
     
      </div>
