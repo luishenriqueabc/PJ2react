@@ -8,9 +8,12 @@ import Planilhas from '../components/Planilha';
 
 
 
+
 const Contas = () => {
 const [lucro, setLucro] = useState()
 const [valortotal, setValor] = useState()
+
+
 
 
 const Navigate = useNavigate();
@@ -26,6 +29,7 @@ const Navigate = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault()
 
+   
 
    
 
@@ -37,6 +41,7 @@ const Navigate = useNavigate();
 
     let valorTotal = quantidade * preco
     let calculoLucro = valorTotal - investimento
+  
   
   
     
@@ -100,7 +105,7 @@ const Navigate = useNavigate();
       <h2 className='Invest' id='in'>Investimento</h2>
       <input id='invest' type="text" ref={investimentoRef}/>
       <div className='Botao '>
-      <input type="submit" value='Calcular'  />
+      <input  type="submit" value='Calcular'  />
       </div>
    
 
@@ -110,6 +115,7 @@ const Navigate = useNavigate();
       <p>R$ {valortotal}</p>
       <h3>Lucro</h3>
       <p>R$ {lucro}</p>
+     
  
       
       
@@ -117,13 +123,14 @@ const Navigate = useNavigate();
   
 
       </div>
-      <h3>Lucro</h3>
+      {/* <h3>Lucro</h3>
       <p className='Teste' id='Soma'>00,00</p>
-    
+     */}
      </div>
      
-      </div>
       <Planilhas />
+      </div>
+ 
       
     </>
   );
