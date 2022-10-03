@@ -2,6 +2,7 @@ import './PaginaContas.css';
 import { useRef, useState} from 'react'
 import {BiArrowBack} from 'react-icons/bi'
 import { useNavigate } from 'react-router-dom';
+import Planilhas from '../components/Planilha';
 
 
 
@@ -10,32 +11,6 @@ import { useNavigate } from 'react-router-dom';
 const Contas = () => {
 const [lucro, setLucro] = useState()
 const [valortotal, setValor] = useState()
-
-var Calculo = new Array();
- 
-function cadastrarCalculo(){
-    var Calculo = new Array();
-
-    var iValor = document.getElementById('in')
-    Calculo.value = iValor.value;
-    Calculo.push(Calculo);
-    atualizarCalculo();
-    iValor.value="";
-    
-  }
-  function atualizarCalculo() {
-    var Calculo=0;
-    var Valor=0;
-    
-
-     for (var index = 0; index < Calculo.length; index++) { 
-    
-         var Calculo = Calculo[index];
-         Valor += parseFloat(Calculo.valor)
-     } 
-  
-     document.getElementById("Soma").innerText=Calculo;
- }
 
 
 const Navigate = useNavigate();
@@ -68,8 +43,9 @@ const Navigate = useNavigate();
     let mensage = `O ${nome}, teve um valor total de R$${valorTotal}  e um lucro de R$${calculoLucro}`
     let Decimais = calculoLucro.toLocaleString('pt-BR')
     let EmReais =  valorTotal.toLocaleString('pt-BR')
-
-  
+   
+    
+ 
 
     console.log(mensage)
 
@@ -124,7 +100,7 @@ const Navigate = useNavigate();
       <h2 className='Invest' id='in'>Investimento</h2>
       <input id='invest' type="text" ref={investimentoRef}/>
       <div className='Botao '>
-      <input type="submit" onClick={cadastrarCalculo()} value='Calcular'  />
+      <input type="submit" value='Calcular'  />
       </div>
    
 
@@ -147,6 +123,7 @@ const Navigate = useNavigate();
      </div>
      
       </div>
+      <Planilhas />
       
     </>
   );
