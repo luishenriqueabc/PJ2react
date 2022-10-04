@@ -97,9 +97,10 @@ Form{
 .Resultado{
 background-color: rgba(0, 0, 0, 0.295);
 border-radius: 50px;
-width:600px;
+width:800px;
 height:420px;
 margin-top:5px;
+margin-left: 10px;;
 }
 
 .Resultado h3{

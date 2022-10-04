@@ -11,7 +11,7 @@ const Sobre = () =>{
     <h1>Sobre</h1>
 </div>
 <div className="Creditos">
-    <h2>Criador</h2>
+    <h2> Criador</h2>
     <h2>Contatos</h2>
 </div>
         </>
@@ -36,7 +36,7 @@ const Sobre = () =>{
                 <p><ImStatsDots/></p>
             </div>
             <div className="card__giratorio-conteudo--traseira">
-            <div className="mb-2 pb-1 pt-3">
+            <div className="mb-2 pb-1 pt-3 justify-content-around">
             <Button variant="dark" size="lg">
             Linkdin
             </Button>{' '}

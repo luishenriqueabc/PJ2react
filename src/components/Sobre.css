@@ -5,27 +5,28 @@ margin-top: 100px;
 }
 .Sobre h1{
     font-weight: lighter;
+    padding-bottom: 200px;;
 }
 .Creditos{
     display: flex;
-    gap:800px;
-    margin-left: 300px;
-    margin-top:200px;
+    justify-content: space-between;
+    padding:0 285px;
+    margin-bottom:40px;
 }
 .Creditos h2{
     font-weight: lighter;
 }
 .Cards{
     display: flex;
-    gap:600px;
-    margin-left: 200px;
-    margin-top:70px;
-    margin-bottom:300px;
+    justify-content: space-between;
+    padding:0 100px;
+    padding-bottom:100px ;
+ 
 }
 .card__giratorio {
     background-color: transparent;
-    width: 300px;
-    height: 200px;
+    width: 500px;
+    height: 300px;
     perspective: 1000px;
 }
 
@@ -36,6 +37,7 @@ margin-top: 100px;
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+
 }
 
 .card__giratorio:hover .card__giratorio-conteudo {
@@ -44,6 +46,7 @@ margin-top: 100px;
 
 .card__giratorio-conteudo--frente,
 .card__giratorio-conteudo--traseira {
+    padding-bottom: 50px;;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -62,7 +65,7 @@ margin-top: 100px;
     background: linear-gradient(-229deg, #E65758, #771D32);
 }
 .card__giratorio-conteudo--frente p{
-    font-size: 70px;
+    font-size: 80px;
     color: white;
 }
 
@@ -70,9 +73,10 @@ margin-top: 100px;
     background: linear-gradient(229deg, #E65758, #771D32);
     color: white;
     transform: rotateY(180deg);
+
 }
 .card__giratorio-conteudo--traseira h1{
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 
 }
 
@@ -85,6 +89,7 @@ margin-top: 100px;
 .card__giratorio-conteudo--traseira h1 {
     font-size: 1.7rem;
 }
+
 
 .logo {
     width: 50px;

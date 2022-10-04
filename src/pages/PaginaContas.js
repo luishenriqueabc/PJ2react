@@ -1,7 +1,7 @@
 import './PaginaContas.css';
 import {BiArrowBack} from 'react-icons/bi'
 import { useNavigate } from 'react-router-dom';
-import Planilhas from '../components/Planilha';
+
 // import {useEffect, useRef, useState, useCallback} from 'react'
 import { useState, useRef } from 'react';
 
@@ -157,7 +157,7 @@ const Navigate = useNavigate();
      */}
      </div>
      
-      <Planilhas />
+    
       </div>
  
       

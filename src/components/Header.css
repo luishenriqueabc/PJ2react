@@ -7,12 +7,14 @@
 }
 
 .Menu{
-    padding-top:50px;
+   
     height:350px;
     background-color: #1d1d1fbd;
     display: flex;
-    justify-content: space-evenly;
-    text-align: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    padding-top:50px;
+ 
   
 }
 .Logo{
