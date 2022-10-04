@@ -4,6 +4,7 @@
     background-color: #1d1d1fbd;
     padding-bottom: 180px;
     margin-bottom:5px;
+    gap:500px;
 
 }
 .Esquerdo p{
@@ -32,9 +33,9 @@
     color:white;
 }
 .Esquerdo{
-    padding-left: 450px;
+    padding-left: 100px;
 }
 .Direito{
-    padding-right: 450px;
+    padding-right: 100px;
   
 }

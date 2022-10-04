@@ -9,7 +9,6 @@ const Header = () => {
                     <p onClick={() => navigate('/Home')}>LH</p><h1 onClick={() => navigate('/Home')}>LUCROS</h1>
                 </div>
                 <div className="Tittle">
-                    <li onClick={() => navigate('/Home')}>Início</li>
                     <li  onClick={() => navigate('/Sobre')}>Sobre</li>
                 </div>
             </div>

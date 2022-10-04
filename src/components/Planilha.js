@@ -2,7 +2,8 @@
 import './Planilha.css';
 
 import { useState,useEffect } from 'react';
-import {BsTrash as IconTrash} from "react-icons/bs"
+
+
 
 
 const Planilha = () => {
@@ -79,8 +80,7 @@ const Planilha = () => {
         <div className="Lucro" id='5'>
         <h2>LUCRO</h2>
         <h4>R$  {produto.lucro}</h4>
-        <IconTrash onClick={() => handleTrashClick(produto.id)}
-      style={{cursor: 'pointer', color:'white',marginLeft:'auto', marginRight:'auto', height:'20px'}}/>
+        <button className='Delete' onClick={() => handleTrashClick(produto.id)}>Deletar</button>
         
         </div>
         </div>

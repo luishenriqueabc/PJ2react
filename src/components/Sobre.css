@@ -1,14 +1,15 @@
 .Sobre {
 text-align: center;
-margin-top: 150px;
+margin-top: 100px;
+
 }
 .Sobre h1{
     font-weight: lighter;
 }
 .Creditos{
     display: flex;
-    gap:900px;
-    margin-left: 395px;
+    gap:800px;
+    margin-left: 300px;
     margin-top:200px;
 }
 .Creditos h2{
@@ -16,8 +17,8 @@ margin-top: 150px;
 }
 .Cards{
     display: flex;
-    gap:700px;
-    margin-left: 300px;
+    gap:600px;
+    margin-left: 200px;
     margin-top:70px;
     margin-bottom:300px;
 }

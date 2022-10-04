@@ -4,7 +4,7 @@
 }
 .VoltarContas p{
     padding-bottom: 100px;;
-    margin-right: 1500px;
+    margin-right: 1200px;
     font-size:50px;
     color:white;
   
@@ -97,8 +97,8 @@ Form{
 .Resultado{
 background-color: rgba(0, 0, 0, 0.295);
 border-radius: 50px;
-width:800px;
-height:450px;
+width:600px;
+height:420px;
 margin-top:5px;
 }
 

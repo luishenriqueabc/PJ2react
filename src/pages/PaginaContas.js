@@ -1,8 +1,9 @@
 import './PaginaContas.css';
-import { useRef, useState} from 'react'
 import {BiArrowBack} from 'react-icons/bi'
 import { useNavigate } from 'react-router-dom';
 import Planilhas from '../components/Planilha';
+// import {useEffect, useRef, useState, useCallback} from 'react'
+import { useState, useRef } from 'react';
 
 
 
@@ -12,6 +13,8 @@ import Planilhas from '../components/Planilha';
 const Contas = () => {
 const [lucro, setLucro] = useState()
 const [valortotal, setValor] = useState()
+// const [totalLucro, setTotalLucro] = useState()
+
 
 
 
@@ -38,9 +41,11 @@ const Navigate = useNavigate();
     let quantidade = event.target[1].value
     let preco = event.target[2].value
     let investimento = event.target[3].value
+    
 
     let valorTotal = quantidade * preco
     let calculoLucro = valorTotal - investimento
+    
   
   
   
@@ -81,7 +86,30 @@ const Navigate = useNavigate();
         investimentoRef.current.value = ''
         alert(data.message)
       });
-  }
+    }
+    // useEffect(() => {
+    //   fetch("http://localhost/pj2/api/produto/selectLucro")
+    //       .then((response) => response.json())
+    //       .then((data) => setTotalLucro(data));
+    // }, [])
+    // const arrayLucro = totalLucro && totalLucro.map((luc) => {
+    //   return luc.lucro
+    // })
+    // let arrayNumber = arrayLucro && arrayLucro.map(Number)
+    // const total = arrayNumber && arrayNumber.reduce((total, currentElement) => total + currentElement)
+  
+    // const resposeFinal = useCallback( (total, lucro) =>{
+    //   const response = total + lucro
+    //   console.log(response)
+    //   return response
+    // },[])
+  
+    // const HanderRespose = () => {
+    //   if(lucro){
+    //     return resposeFinal(total, lucro)
+    //   }
+    // }
+
   return (
     <>
 
@@ -115,6 +143,7 @@ const Navigate = useNavigate();
       <p>R$ {valortotal}</p>
       <h3>Lucro</h3>
       <p>R$ {lucro}</p>
+     {/* <h1>{HanderRespose()}</h1>  */}
      
  
       
