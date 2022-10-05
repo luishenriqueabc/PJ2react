@@ -1,11 +1,12 @@
 
 .Separador{
     display: flex;
+    justify-content: space-between;
 }
 .VoltarContas p{
-    padding-bottom: 100px;;
-    margin-right: 1200px;
-    font-size:50px;
+    padding-bottom: 80px;;
+    margin-right: 1500px;
+    font-size:40px;
     color:white;
   
 }
@@ -17,11 +18,13 @@
     padding-top: 100px;
     padding-right: 40px;
     padding-bottom: 200px;;
+  
 }
 .Formulario h1{
+    padding-left: 680px;;
     color: white;
     font-size:70px;
-    font-weight: bold;
+    font-weight: 600;
     font-family: 'Inter' 'Sans-serif';
     padding-bottom: 50px;;
   
@@ -32,10 +35,14 @@
 }
 
 .Formulario input{
-    width:300px;
+    width:400px;
     padding-bottom: 10px;
     border-radius: 10px;
 
+
+}
+Form{
+    margin-left: 100px;;
 }
 input::Placeholder{
     font-size: 30px;
@@ -55,52 +62,49 @@ input{
     border:0;
     font-size:30px;
     padding-left: 5px;;
+  
 }
 .Botao input {
    font-size:20px;
    background-color: red;
    color:white;
    font-family: 'Inter', sans-serif;
-
-  
-  
    border-radius: 20px 8px;;
 }
 
 .Nome{
-    padding-right:210px;
+    padding-right:300px;
 }
 .Quant{
-    padding-right:135px;
+    padding-right:235px;
 }
 .Preco{
-    padding-right:220px;
+    padding-right:310px;
 }
 .Invest{
-    padding-right:115px;
+    padding-right:215px;
 }
-Form{
-  margin-right: 100px;
-}
+
 .Lucro1{
     padding-right:500px;;
 }
 .Cifrao{
     padding-left:50px;
-    padding-top: 245px;;
-    font-size:35px;
+    padding-top: 243px;;
+    font-size:37px;
     padding-right: 10px;;
     color: white;
-    font-weight: bold;
+    font-weight: 400;
     font-family: 'Inter' 'Sans-serif';
 }
 .Resultado{
 background-color: rgba(0, 0, 0, 0.295);
 border-radius: 50px;
-width:800px;
-height:420px;
+width:1100px;
+height:500px;
 margin-top:5px;
-margin-left: 10px;;
+margin-right: 50px;
+
 }
 
 .Resultado h3{
@@ -112,7 +116,7 @@ margin-left: 10px;;
 .Resultado p{
     color:white;
     font-size:50px;
-    padding-top:30px;
+    padding-top:50px;
     font-family: 'Inter', sans-serif;
 }
 

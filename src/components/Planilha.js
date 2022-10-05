@@ -2,6 +2,8 @@
 import './Planilha.css';
 
 import { useState,useEffect } from 'react';
+import swal from 'sweetalert';
+
 
 
 
@@ -15,32 +17,43 @@ const Planilha = () => {
       .then((data) => setProduto(data));   
     }, []);
 
-    const handleTrashClick = (produtoId) => {
-      const formData = new FormData();
-      formData.append('id', produtoId);
-      const urlDelete = "http://localhost/pj2/api/produto/delete";
-      fetch(urlDelete, {
-      method: 'POST',
-      body: formData
-      })
-      .then((response) => response.json())
-      .then((data) => {
-      alert(data.message)
-      let produtoFiltered = produto.filter(function(produto){ 
-      return produto.id !== produtoId;
-      });
-      setProduto(produtoFiltered)
-      });
+
+      function confirmAction(produtoId) {
+        swal({
+          title: "Tem Certeza?",
+          text: "Você não terá essa Informação de volta!",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        })
+        .then((willDelete) => {
+          if (willDelete) {
+
+            const formData = new FormData();
+            formData.append('id', produtoId);
+            const urlDelete = "http://localhost/pj2/api/produto/delete";
+            fetch(urlDelete, {
+            method: 'POST',
+            body: formData
+            })
+            .then((response) => response.json())
+            .then((data) => {
+          
+            let produtoFiltered = produto.filter(function(produto){ 
+            return produto.id !== produtoId;
+            });
+            setProduto(produtoFiltered)
+            });
+            swal("Deletado com sucesso!", {
+              icon: "success",
+            });
+          } else {
+            swal("Cancelado!");
+          }
+        });
       }
-  
-      function confirmAction() {
-        let confirmAction = confirm("Are you sure to execute this action?");
-        if (confirmAction) {
-          alert("Action successfully executed");
-        } else {
-          alert("Action canceled");
-        }
-      }
+    
+    
     
     return (
     <>
@@ -87,7 +100,7 @@ const Planilha = () => {
         <div className="Lucro" id='5'>
         <h2>LUCRO</h2>
         <h4>R$  {produto.lucro}</h4>
-        <button className='Delete' onClick={() => handleTrashClick(produto.id)}>Deletar</button>
+        <button className='Delete' onClick={() => confirmAction(produto.id)}>Deletar</button>
         
         </div>
         </div>

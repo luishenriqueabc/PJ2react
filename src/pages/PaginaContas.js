@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 // import {useEffect, useRef, useState, useCallback} from 'react'
 import { useState, useRef } from 'react';
+import Planilha from '../components/Planilha';
 
 
 
@@ -120,10 +121,10 @@ const Navigate = useNavigate();
      <h1 className='Titulo'>Cálculo de Lucros</h1>
 
      <div className='Separador'>
-      <p className='Cifrao'>R$ <br /><br />
-      <spam>R$</spam></p>
+   
       
      <form className="Form" onSubmit={(event) => handleSubmit(event)}>
+       
        <h2 className='Nome' id='nome' >Nome</h2>
       <input id='nome' type="text" ref={nomeRef}/>
       <h2 className='Quant'>Quantidade</h2>
@@ -157,7 +158,7 @@ const Navigate = useNavigate();
      */}
      </div>
      
-    
+    <Planilha />
       </div>
  
       
