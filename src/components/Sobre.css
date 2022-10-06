@@ -21,7 +21,6 @@ margin-top: 100px;
     justify-content: space-between;
     padding:0 100px;
     padding-bottom:100px ;
- 
 }
 .card__giratorio {
     background-color: transparent;
@@ -29,7 +28,6 @@ margin-top: 100px;
     height: 300px;
     perspective: 1000px;
 }
-
 .card__giratorio-conteudo {
     position: relative;
     width: 100%;
@@ -37,13 +35,10 @@ margin-top: 100px;
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-
 }
-
 .card__giratorio:hover .card__giratorio-conteudo {
     transform: rotateY(180deg);
 }
-
 .card__giratorio-conteudo--frente,
 .card__giratorio-conteudo--traseira {
     padding-bottom: 50px;;
@@ -60,7 +55,6 @@ margin-top: 100px;
     justify-content: center;
     flex-direction: column;
 }
-
 .card__giratorio-conteudo--frente {
     background: linear-gradient(-229deg, #E65758, #771D32);
 }
@@ -68,29 +62,22 @@ margin-top: 100px;
     font-size: 80px;
     color: white;
 }
-
 .card__giratorio-conteudo--traseira {
     background: linear-gradient(229deg, #E65758, #771D32);
     color: white;
     transform: rotateY(180deg);
-
 }
 .card__giratorio-conteudo--traseira h1{
     padding-bottom: 30px;
-
 }
-
 .card__giratorio-conteudo--traseira h1,
 .card__giratorio-conteudo--traseira p {
     margin: 0;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-
 .card__giratorio-conteudo--traseira h1 {
     font-size: 1.7rem;
 }
-
-
 .logo {
     width: 50px;
     height: 50px;

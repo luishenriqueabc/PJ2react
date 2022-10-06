@@ -2,20 +2,15 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-  
-
 }
 
 .Menu{
-   
     height:350px;
     background-color: #1d1d1fbd;
     display: flex;
     justify-content: space-between;
     padding: 0 100px;
-    padding-top:50px;
- 
-  
+    padding-top:50px; 
 }
 .Logo{
     color:white;
@@ -31,12 +26,10 @@
 .Logo p{
     padding-top:19px;
     font-weight: bold;
-  
 }
 .Logo h1{
     font-weight: lighter;
 }
-
 .Tittle{
     color:white;
     display: flex;

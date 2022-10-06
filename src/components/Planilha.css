@@ -1,5 +1,3 @@
-
-
 .Produtos h1{
     font-size: 30px;;
     margin-left: auto;
@@ -13,24 +11,20 @@
     margin-top: 190px;;
     color:white;
     font-weight: lighter;
-  
 }
 .Flex{
-display: flex;;
-justify-content: space-around;
-gap:50px;
-padding-top:30px;
-padding-left: 50px;;
-
+    display: flex;;
+    justify-content: space-around;
+    gap:50px;
+    padding-top:30px;
+    padding-left: 50px;;
 }
 .Flex h4{
     font-size: 30px;
     font-family: 'Inter', sans-serif;
     font-weight: lighter;
     padding-top:30px;
-    color:white;
-
-    
+    color:white;  
 }
 .Flex h2{
     font-family: 'Inter', sans-serif;

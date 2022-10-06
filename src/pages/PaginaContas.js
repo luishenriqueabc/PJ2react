@@ -1,9 +1,10 @@
+
+
 import './PaginaContas.css';
 import {BiArrowBack} from 'react-icons/bi'
 import { useNavigate } from 'react-router-dom';
 
-// import {useEffect, useRef, useState, useCallback} from 'react'
-import { useState, useRef } from 'react';
+import {useEffect, useRef, useState, useCallback} from 'react'
 import Planilha from '../components/Planilha';
 
 
@@ -14,7 +15,7 @@ import Planilha from '../components/Planilha';
 const Contas = () => {
 const [lucro, setLucro] = useState()
 const [valortotal, setValor] = useState()
-// const [totalLucro, setTotalLucro] = useState()
+const [totalLucro, setTotalLucro] = useState()
 
 
 
@@ -88,28 +89,28 @@ const Navigate = useNavigate();
         alert(data.message)
       });
     }
-    // useEffect(() => {
-    //   fetch("http://localhost/pj2/api/produto/selectLucro")
-    //       .then((response) => response.json())
-    //       .then((data) => setTotalLucro(data));
-    // }, [])
-    // const arrayLucro = totalLucro && totalLucro.map((luc) => {
-    //   return luc.lucro
-    // })
-    // let arrayNumber = arrayLucro && arrayLucro.map(Number)
-    // const total = arrayNumber && arrayNumber.reduce((total, currentElement) => total + currentElement)
+    useEffect(() => {
+      fetch("http://localhost/pj2/api/produto/selectlucro")
+          .then((response) => response.json())
+          .then((data) => setTotalLucro(data));
+    }, [])
+    const arrayLucro = totalLucro && totalLucro.map((luc) => {
+      return luc.lucro
+    })
+    let arrayNumber = arrayLucro && arrayLucro.map(Number)
+    const total = arrayNumber && arrayNumber.reduce((total, currentElement) => total + currentElement)
   
-    // const resposeFinal = useCallback( (total, lucro) =>{
-    //   const response = total + lucro
-    //   console.log(response)
-    //   return response
-    // },[])
+    const resposeFinal = useCallback( (total, lucro) =>{
+      const response = total + lucro
+      console.log(response)
+      return response
+    },[])
   
-    // const HanderRespose = () => {
-    //   if(lucro){
-    //     return resposeFinal(total, lucro)
-    //   }
-    // }
+    const HanderRespose = () => {
+      if(lucro){
+        return resposeFinal(total, lucro)
+      }
+    }
 
   return (
     <>
@@ -144,7 +145,7 @@ const Navigate = useNavigate();
       <p>R$ {valortotal}</p>
       <h3>Lucro</h3>
       <p>R$ {lucro}</p>
-     {/* <h1>{HanderRespose()}</h1>  */}
+     <h1>{HanderRespose()}</h1> 
      
  
       
@@ -153,9 +154,9 @@ const Navigate = useNavigate();
   
 
       </div>
-      {/* <h3>Lucro</h3>
-      <p className='Teste' id='Soma'>00,00</p>
-     */}
+      <h3>Lucro</h3>
+      <p className='Teste' id='Soma'></p>
+    
      </div>
      
     <Planilha />
