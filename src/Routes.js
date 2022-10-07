@@ -3,8 +3,6 @@ import PaginaContas from './pages/PaginaContas';
 import PaginaHome from './pages/PaginaHome';
 import PaginaSobre from './pages/PaginaSobre';
 
-
-
 const Routers = () =>{
     return(
         <Routes>
@@ -15,5 +13,4 @@ const Routers = () =>{
         </Routes>
     );
 };
-
 export default Routers;

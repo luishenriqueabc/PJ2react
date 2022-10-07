@@ -2,6 +2,7 @@ import './Sobre.css';
 import {ImStatsDots} from 'react-icons/im'
 import Button from 'react-bootstrap/esm/Button';
 
+
 const Sobre = () =>{
     return(
         <>
@@ -55,6 +56,7 @@ const Sobre = () =>{
                 </div>
             </div>
         </div>
+     
             </>
         </> 
     );

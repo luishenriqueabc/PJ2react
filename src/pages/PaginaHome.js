@@ -7,12 +7,11 @@ import Sobre from '../components/Sobre';
 
 const PaginaHome = () =>{
     return(
-        <>
+    <>
         <Header />
         <LandiPage />
         <Sobre />
-      
-        </>
+    </>
     );
 };
 export default PaginaHome;

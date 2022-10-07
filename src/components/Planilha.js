@@ -1,6 +1,7 @@
 import './Planilha.css';
 import { useState,useEffect } from 'react';
 import swal from 'sweetalert';
+import Graficos from '../pages/Graficos';
 
 const Planilha = () => {
     const [produto, setProduto] = useState(null);
@@ -52,6 +53,7 @@ const Planilha = () => {
       produto.map((produto) => {
       return (
       <>
+      <Graficos />
         <div className="Produtos">
           <h1>Produto</h1>
         </div>
