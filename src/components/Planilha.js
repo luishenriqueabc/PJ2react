@@ -1,7 +1,7 @@
 import './Planilha.css';
 import { useState,useEffect } from 'react';
 import swal from 'sweetalert';
-import Graficos from '../pages/Graficos';
+import Graficos from './Graficos';
 
 const Planilha = () => {
     const [produto, setProduto] = useState(null);

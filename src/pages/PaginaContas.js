@@ -7,58 +7,33 @@ import { useRef, useState} from 'react'
 import Planilha from '../components/Planilha';
 
 const Contas = () => {
-
-
-
-  
-  
   //Declaração das constantes.
-
 const [lucro, setLucro] = useState()
 const [valortotal, setValor] = useState()
 // const [totalLucro, setTotalLucro] = useState()
 
 const Navigate = useNavigate();
 
-  let nomeRef = useRef();
-  let quantidadeRef = useRef();
-  let precoRef = useRef();
-  let investimentoRef = useRef();
+let nomeRef = useRef();
+let quantidadeRef = useRef();
+let precoRef = useRef();
+let investimentoRef = useRef();
 // Criação do Handle para create
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    let nome = event.target[0].value
-    let quantidade = event.target[1].value
-    let preco = event.target[2].value
-    let investimento = event.target[3].value
-    
-    let valorTotal = quantidade * preco
-    let calculoLucro = valorTotal - investimento
-   
-
-
-
-
-
-  var CalculoTotal = [] 
-  let Ivalor = calculoLucro
-  CalculoTotal.push(Ivalor)
-let soma =0;
-  for (var index = 0; index < CalculoTotal.length; index++) {
-    soma += CalculoTotal;
-  }
-  console.log(CalculoTotal)
+const handleSubmit = (event) => {
+  event.preventDefault()
+  let nome = event.target[0].value
+  let quantidade = event.target[1].value
+  let preco = event.target[2].value
+  let investimento = event.target[3].value
   
-
-
-
-
-
-
-    let mensage = `O ${nome}, teve um valor total de R$${valorTotal}  e um lucro de R$${calculoLucro}`
-    let Decimais = calculoLucro.toLocaleString('pt-BR')
-    let EmReais =  valorTotal.toLocaleString('pt-BR')
-   
+  let valorTotal = quantidade * preco
+  let calculoLucro = valorTotal - investimento
+  
+  let mensage = `O ${nome}, teve um valor total de R$${valorTotal}  e um lucro de R$${calculoLucro}`
+  // Tranformando números em decimais
+  let Decimais = calculoLucro.toLocaleString('pt-BR')
+  let EmReais =  valorTotal.toLocaleString('pt-BR')
+  
     console.log(mensage)
     //Atualizando Valores e mostrando na tela.
     setLucro(Decimais)
@@ -86,6 +61,7 @@ let soma =0;
       investimentoRef.current.value = ''
       alert(data.message)
       });
+    
     }
   //   useEffect(() => {
   //     fetch("http://localhost/pj2/api/produto/selectlucro")
@@ -109,7 +85,6 @@ let soma =0;
   //       return resposeFinal(total, lucro)
   //     }
   //   }
-
   return (
   <>
     <div className="Formulario">
@@ -130,7 +105,7 @@ let soma =0;
           <div className='Botao '>
             <input  type="submit" value='Calcular'  />
           </div>
-    </form>
+      </form>
       <div className='Resultado'>
         <h3>Retorno Total</h3>
         <p>R$ {valortotal}</p>
