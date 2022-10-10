@@ -7,6 +7,11 @@ import { useRef, useState} from 'react'
 import Planilha from '../components/Planilha';
 
 const Contas = () => {
+
+
+
+  
+  
   //Declaração das constantes.
 
 const [lucro, setLucro] = useState()
@@ -29,7 +34,27 @@ const Navigate = useNavigate();
     
     let valorTotal = quantidade * preco
     let calculoLucro = valorTotal - investimento
-    
+   
+
+
+
+
+
+  var CalculoTotal = [] 
+  let Ivalor = calculoLucro
+  CalculoTotal.push(Ivalor)
+let soma =0;
+  for (var index = 0; index < CalculoTotal.length; index++) {
+    soma += CalculoTotal;
+  }
+  console.log(CalculoTotal)
+  
+
+
+
+
+
+
     let mensage = `O ${nome}, teve um valor total de R$${valorTotal}  e um lucro de R$${calculoLucro}`
     let Decimais = calculoLucro.toLocaleString('pt-BR')
     let EmReais =  valorTotal.toLocaleString('pt-BR')
@@ -110,7 +135,7 @@ const Navigate = useNavigate();
         <h3>Retorno Total</h3>
         <p>R$ {valortotal}</p>
         <h3>Lucro</h3>
-        <p>R$ {lucro}</p>
+        <p id='lucro'>R$ {lucro}</p>
         {/* <h1>{HanderRespose()}</h1>  */}
       </div>
       {/* <h3>Lucro</h3>

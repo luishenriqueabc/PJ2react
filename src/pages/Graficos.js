@@ -1,6 +1,6 @@
 import './Grafico.css';
 import React from "react";
-import { useEffect,useState } from 'react';
+// import { useEffect,useState } from 'react';
 import {
   BarChart,
   Bar,
@@ -11,15 +11,8 @@ import {
   Legend,
   ResponsiveContainer 
 } from "recharts";
-const Graficos =() => {
-    const [produto, setProduto] = useState(null);
- 
-    useEffect(() => {
-      fetch("http://localhost/pj2/api/produto/select-all")
-      .then((response) => response.json())
-      .then((data) => setProduto(data));   
-    }, []);
- 
+const Graficos =() => { 
+
 const data = [
   {
     name: "Ainda",

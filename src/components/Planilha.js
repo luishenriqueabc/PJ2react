@@ -49,11 +49,11 @@ const Planilha = () => {
   
     return (
     <>
+        <Graficos />
       {produto &&
       produto.map((produto) => {
       return (
       <>
-      <Graficos />
         <div className="Produtos">
           <h1>Produto</h1>
         </div>
