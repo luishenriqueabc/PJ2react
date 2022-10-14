@@ -60,8 +60,6 @@ const Graficos =() => {
       <Bar dataKey="uv" fill="#82ca9d" />
     </BarChart>
 </ResponsiveContainer>
-           
-     
         </>
           })
         }

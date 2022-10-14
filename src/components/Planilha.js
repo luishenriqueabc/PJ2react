@@ -5,12 +5,35 @@ import Graficos from './Graficos';
 
 const Planilha = () => {
     const [produto, setProduto] = useState(null);
- 
+    // console.log(produto);  
+
+    
+  
+
+//    for (let i = 0; i < produto.length; i++) {
+//     produto += produto;
+//    }
+// console.log(produto)
+  // expected output: 10
+
+  //  {Object.values().map((produto) => {
+  //   var lucroTotal = 0;
+  
+    // for (let i = 0; i < produto.length; i++) {
+    //   lucroTotal += produto[i].quantidade * produto[i].preco - produto[i].investimento ;
+    // }
+  
+  //   return (
+  //       <p>TotalLLL: {lucroTotal}</p>
+  //   );
+  // })}
+// 
     useEffect(() => {
       fetch("http://localhost/pj2/api/produto/select-all")
       .then((response) => response.json())
       .then((data) => setProduto(data));   
     }, []);
+   
 
       function confirmAction(produtoId) {
         swal({
@@ -46,7 +69,6 @@ const Planilha = () => {
           }
         });
       }
-  
     return (
     <>
         <Graficos />
@@ -82,17 +104,21 @@ const Planilha = () => {
 
               <div className="ValorTotal" id='4'>
                   <h2>RETORNO TOTAL</h2>
+
                   <h4>R$ {produto.valortotal}</h4>
               </div>
 
               <div className="Lucro" id='5'>
                   <h2>LUCRO</h2>
-                  <h4>R$  {produto.lucro}</h4>
+                  <h4>R$ {(produto.quantidade * produto.preco - produto.investimento)} :: {produto.lucro}</h4>
                   <button className='Delete' onClick={() => confirmAction(produto.id)}>Deletar</button>
               </div>
-          </div>
+             
+          </div>  
+          
       </div>
       </>
+    
           )
         })
       }
