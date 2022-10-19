@@ -1,19 +1,16 @@
 import './Planilha.css';
 import { useState,useEffect } from 'react';
 import swal from 'sweetalert';
-import Graficos from './Graficos';
+
 
 const Planilha = () => {
     const [produto, setProduto] = useState(null);
-    // console.log(produto);  
+   
 
     
   
 
-//    for (let i = 0; i < produto.length; i++) {
-//     produto += produto;
-//    }
-// console.log(produto)
+
   // expected output: 10
 
   //  {Object.values().map((produto) => {
@@ -69,11 +66,18 @@ const Planilha = () => {
           }
         });
       }
+      
     return (
     <>
-        <Graficos />
+ 
       {produto &&
       produto.map((produto) => {
+        if(produto.lucro > 0){
+          
+        } else{
+          return ""
+        }
+       
       return (
       <>
         <div className="Produtos">
@@ -110,7 +114,7 @@ const Planilha = () => {
 
               <div className="Lucro" id='5'>
                   <h2>LUCRO</h2>
-                  <h4>R$ {(produto.quantidade * produto.preco - produto.investimento)} :: {produto.lucro}</h4>
+                  <h4>R$ {produto.lucro}</h4>
                   <button className='Delete' onClick={() => confirmAction(produto.id)}>Deletar</button>
               </div>
              

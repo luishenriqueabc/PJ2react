@@ -3,7 +3,6 @@ import Sobre from '../components/Sobre';
 import './PaginaSobre.css';
 import {BiArrowBack} from 'react-icons/bi';
 
-
 const PaginaSobre = () =>{
     const Navigate = useNavigate();
     return(
@@ -12,7 +11,6 @@ const PaginaSobre = () =>{
             <p onClick={() => Navigate('/Home')}><BiArrowBack /></p>
             </div>
             <Sobre />
-            
         </>
     );
 };

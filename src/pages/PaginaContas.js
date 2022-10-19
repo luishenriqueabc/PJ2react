@@ -1,16 +1,14 @@
-
-
 import './PaginaContas.css';
 import {BiArrowBack} from 'react-icons/bi'
 import { useNavigate } from 'react-router-dom';
-import { useRef, useState} from 'react'
+import { useRef, useState,useEffect} from 'react'
 import Planilha from '../components/Planilha';
 
 const Contas = () => {
   //Declaração das constantes.
 const [lucro, setLucro] = useState()
 const [valortotal, setValor] = useState()
-// const [totalLucro, setTotalLucro] = useState()
+const [totalLucro, setTotalLucro] = useState()
 
 const Navigate = useNavigate();
 
@@ -34,46 +32,48 @@ const handleSubmit = (event) => {
   let Decimais = calculoLucro.toLocaleString('pt-BR')
   let EmReais =  valorTotal.toLocaleString('pt-BR')
   
-    console.log(mensage)
-    //Atualizando Valores e mostrando na tela.
-    setLucro(Decimais)
-    setValor(EmReais)
+  console.log(mensage)
+  //Atualizando Valores e mostrando na tela.
+  setLucro(Decimais)
+  setValor(EmReais)
 //constante do create para o banco.
-    const formData = new FormData();
-    formData.append('nome', event.target[0].value);
-    formData.append('quantidade', event.target[1].value);
-    formData.append('preco', event.target[2].value);
-    formData.append('investimento', event.target[3].value);
-    formData.append('lucro', calculoLucro);
-    formData.append('valortotal', valorTotal);
-    fetch(
-      "http://localhost/pj2/api/produto/create",
-      {
-        method: 'POST',
-        body: formData,  
-      }
-      )
-      .then((response) => response.json())
-      .then((data) => {
-      nomeRef.current.value = ''
-      quantidadeRef.current.value = ''
-      precoRef.current.value = ''
-      investimentoRef.current.value = ''
-      alert(data.message)
-      });
-    
+  const formData = new FormData();
+  formData.append('nome', event.target[0].value);
+  formData.append('quantidade', event.target[1].value);
+  formData.append('preco', event.target[2].value);
+  formData.append('investimento', event.target[3].value);
+  formData.append('lucro', calculoLucro);
+  formData.append('valortotal', valorTotal);
+  fetch(
+    "http://localhost/pj2/api/produto/create",
+    {
+      method: 'POST',
+      body: formData,  
     }
-  //   useEffect(() => {
-  //     fetch("http://localhost/pj2/api/produto/selectlucro")
-  //     .then((response) => response.json())
-  //     .then((data) => setTotalLucro(data));
-  // }, [])
-  //   const arrayLucro = totalLucro && totalLucro.map((luc) => {
-  //   return luc.lucro
-  //   })
-  //   let arrayNumber = arrayLucro && arrayLucro.map(Number)
-  //   const total = arrayNumber && arrayNumber.reduce((total, currentElement) => total + currentElement)
-  
+      ) 
+    .then((response) => response.json())
+    .then((data) => {
+    nomeRef.current.value = ''
+    quantidadeRef.current.value = ''
+    precoRef.current.value = ''
+    investimentoRef.current.value = ''
+    alert(data.message)
+    });
+  }
+  useEffect(() => {
+    fetch("http://localhost/pj2/api/produto/selectlucro")
+    .then((response) => response.json())
+    .then((data) => setTotalLucro(data));
+  }, [])
+    
+  const arrayLucro = totalLucro && totalLucro.map((luc) => {
+    return luc.lucro
+  })
+  let arrayNumber = arrayLucro && arrayLucro.map(Number)
+  const total = arrayNumber && arrayNumber.reduce((total, currentElement) => total + currentElement)
+
+  const vTotal = total.toLocaleString('pt-BR')
+   
   //   const resposeFinal = useCallback( (total, lucro) =>{
   //     const response = total + lucro
   //     console.log(response)
@@ -85,15 +85,18 @@ const handleSubmit = (event) => {
   //       return resposeFinal(total, lucro)
   //     }
   //   }
+
+
+  //Aparece na tela.
   return (
   <>
     <div className="Formulario">
-      <div className="VoltarContas">
+        <div className="VoltarContas">
         <p onClick={() => Navigate('/Home')}><BiArrowBack /></p>
-      </div>
-     <h1 className='Titulo'>Cálculo de Lucros</h1>
-     <div className='Separador'>
-       <form className="Form" onSubmit={(event) => handleSubmit(event)}>
+        </div>
+    <h1 className='Titulo'>Cálculo de Lucros</h1>
+    <div className='Separador'>
+      <form className="Form" onSubmit={(event) => handleSubmit(event)}>
           <h2 className='Nome' id='nome' >Nome</h2>
           <input id='nome' type="text" ref={nomeRef}/>
           <h2 className='Quant'>Quantidade</h2>
@@ -106,17 +109,17 @@ const handleSubmit = (event) => {
             <input  type="submit" value='Calcular'  />
           </div>
       </form>
-      <div className='Resultado'>
-        <h3>Retorno Total</h3>
-        <p>R$ {valortotal}</p>
-        <h3>Lucro</h3>
-        <p id='lucro'>R$ {lucro}</p>
-        {/* <h1>{HanderRespose()}</h1>  */}
+        <div className='Resultado'>
+          <h3>Retorno Total</h3>
+          <p>R$ {valortotal}</p>
+          <h3>Lucro</h3>
+          <p id='lucro'>R$ {lucro}</p>
+        </div>
       </div>
-      {/* <h3>Lucro</h3>
-      <p className='Teste' id='Soma'></p> */}
-    </div>
-    <Planilha />
+      <h1 id='ac'>Lucro Acumulado
+          <h2 id='lucroT'> R$  {vTotal}</h2> 
+      </h1>
+      <Planilha />
   </div>     
 </>
   );
