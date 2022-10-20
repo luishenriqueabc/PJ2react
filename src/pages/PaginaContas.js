@@ -72,8 +72,6 @@ const handleSubmit = (event) => {
   let arrayNumber = arrayLucro && arrayLucro.map(Number)
   const total = arrayNumber && arrayNumber.reduce((total, currentElement) => total + currentElement)
 
-  const vTotal = total.toLocaleString('pt-BR')
-   
   //   const resposeFinal = useCallback( (total, lucro) =>{
   //     const response = total + lucro
   //     console.log(response)
@@ -86,14 +84,13 @@ const handleSubmit = (event) => {
   //     }
   //   }
 
-
   //Aparece na tela.
   return (
   <>
     <div className="Formulario">
-        <div className="VoltarContas">
+      <div className="VoltarContas">
         <p onClick={() => Navigate('/Home')}><BiArrowBack /></p>
-        </div>
+      </div>
     <h1 className='Titulo'>Cálculo de Lucros</h1>
     <div className='Separador'>
       <form className="Form" onSubmit={(event) => handleSubmit(event)}>
@@ -117,7 +114,7 @@ const handleSubmit = (event) => {
         </div>
       </div>
       <h1 id='ac'>Lucro Acumulado
-          <h2 id='lucroT'> R$  {vTotal}</h2> 
+          <h2 id='lucroT'> R$  {total}</h2> 
       </h1>
       <Planilha />
   </div>     

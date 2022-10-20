@@ -1,23 +1,26 @@
 .Produtos h1{
     font-size: 30px;;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
     padding-bottom: 50px;;
-    background-color: rgba(0, 0, 0, 0.363);
-    widtH:150px;
-    height:20px;
-    padding-left: 10px;;
-    border-radius: 30px 20PX;;
+    height:30px;
     margin-top: 190px;;
+    padding-left: 130px;;
     color:white;
-    font-weight: lighter;
+    font-weight: lighter;  
+}
+.Produtos{
+    box-shadow: 1px 9px 59px -14px rgba(0,0,0,0.69);
+-webkit-box-shadow: 1px 9px 59px -14px rgba(0,0,0,0.69);
+-moz-box-shadow: 1px 9px 59px -14px rgba(0,0,0,0.69);
+width: 800px;
+border-radius: 0  25px   25px 0;;;
 }
 .Flex{
     display: flex;;
     justify-content: space-around;
     gap:50px;
     padding-top:30px;
-    padding-left: 50px;;
+    padding-left: 100px;;
 }
 .Flex h4{
     font-size: 30px;
@@ -32,7 +35,7 @@
 }
 button {
     color: white;
-    background-color: rgba(255, 0, 0, 0.541);
+    background-color: red;
     border: 0;
     font-size: 20px;;
     padding: 0 30px;

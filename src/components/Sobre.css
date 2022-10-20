@@ -1,7 +1,6 @@
 .Sobre {
-text-align: center;
-margin-top: 100px;
-
+    text-align: center;
+    margin-top: 100px;
 }
 .Sobre h1{
     font-weight: lighter;
@@ -20,7 +19,7 @@ margin-top: 100px;
     display: flex;
     justify-content: space-between;
     padding:0 100px;
-    padding-bottom:100px ;
+    padding-bottom:400px ;
 }
 .card__giratorio {
     background-color: transparent;

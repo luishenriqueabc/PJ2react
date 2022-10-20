@@ -1,6 +1,7 @@
 import Header from '../components/Header';
 import LandiPage from '../components/LandiPage';
 import Sobre from '../components/Sobre';
+import Footer from '../components/footer';
 
 
 
@@ -11,6 +12,7 @@ const PaginaHome = () =>{
         <Header />
         <LandiPage />
         <Sobre />
+        <Footer />
     </>
     );
 };
