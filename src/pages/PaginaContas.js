@@ -70,7 +70,7 @@ const handleSubmit = (event) => {
     return luc.lucro
   })
   let arrayNumber = arrayLucro && arrayLucro.map(Number)
-  const total = arrayNumber && arrayNumber.reduce((total, currentElement) => total + currentElement)
+  const total = arrayNumber && arrayNumber.reduce((total, currentElement) => total + currentElement).toLocaleString('pt-br')
 
   //   const resposeFinal = useCallback( (total, lucro) =>{
   //     const response = total + lucro
