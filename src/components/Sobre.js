@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/esm/Button';
 const Sobre = () =>{
     return(
         <>
+        <div className='Shadow'>
             <>
                 <div className="Sobre">
                     <h1>Sobre</h1>
@@ -58,6 +59,7 @@ const Sobre = () =>{
         </div>
      
             </>
+    </div>
         </> 
     );
 };

@@ -2,8 +2,10 @@ import './Planilha.css';
 import { useState,useEffect } from 'react';
 import swal from 'sweetalert';
 
+
 const Planilha = () => {
     const [produto, setProduto] = useState(null);
+
   // expected output: 10
 
   //  {Object.values().map((produto) => {
@@ -18,6 +20,7 @@ const Planilha = () => {
   //   );
   // })}
 // 
+
     useEffect(() => {
       fetch("http://localhost/pj2/api/produto/select-all")
       .then((response) => response.json())
@@ -89,11 +92,11 @@ const Planilha = () => {
               </div>
               <div className="Investimento" id='3'>
                   <h2>INVESTIMENTO</h2>
-                  <h4>R$  {produto.investimento.toLocaleString('pt-BR')}</h4>
+                  <h4>R$  {produto.investimento}</h4>
               </div>
               <div className="ValorTotal" id='4'>
                   <h2>RETORNO TOTAL</h2>
-                  <h4>R$ {produto.valortotal}</h4>
+                 <h4>R$ {produto.valortotal}</h4>
               </div>
               <div className="Lucro" id='5'>
                   <h2>LUCRO</h2>

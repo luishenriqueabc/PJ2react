@@ -1,29 +1,47 @@
+.Shadow{
+    box-shadow: 1px 9px 59px -14px rgba(17, 2, 2, 0.69);
+    -webkit-box-shadow: 1px 9px 59px -14px rgba(36, 4, 4, 0.69);
+    -moz-box-shadow: 1px 9px 59px -14px rgba(0,0,0,0.69);
+
+}
 .Sobre {
     text-align: center;
     margin-top: 100px;
+    padding-top: 100px;;
+  
+   
+
 }
 .Sobre h1{
     font-weight: lighter;
-    padding-bottom: 200px;;
+    padding-bottom: 100px;;
 }
 .Creditos{
     display: flex;
-    justify-content: space-between;
-    padding:0 285px;
+    justify-content: center;
+    gap:530px;
     margin-bottom:40px;
+  
+    
+   
 }
 .Creditos h2{
     font-weight: lighter;
+    font-size: 50px;;
+    
 }
 .Cards{
     display: flex;
     justify-content: space-between;
-    padding:0 100px;
-    padding-bottom:400px ;
+    padding:0 400px;
+    padding-bottom:100px ;
+    margin-bottom: 300px;;
+    
 }
 .card__giratorio {
+    justify-content: space-between;
     background-color: transparent;
-    width: 500px;
+    width: 400px;
     height: 300px;
     perspective: 1000px;
 }
