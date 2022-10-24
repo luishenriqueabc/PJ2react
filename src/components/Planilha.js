@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Planilha = () => {
     const [produto, setProduto] = useState(null);
-    const navigate = useNavigate()
+    const Navigate = useNavigate()
 
   // expected output: 10
 
@@ -105,7 +105,7 @@ const Planilha = () => {
                   <h2>LUCRO</h2>
                   <h4>R$ {produto.lucro}</h4>
                   <button className='Delete' onClick={() => confirmAction(produto.id)}>Deletar</button>
-                  <button onClick={() => navigate('.../Edit' + produto.id)}> Edit </button>
+                  <button onClick={() => Navigate('/Edit/' + produto.id)}> Edit </button>
                   
               </div>
           </div>  

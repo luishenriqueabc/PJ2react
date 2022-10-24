@@ -5,10 +5,10 @@ const ProdutoEdit = () => {
 
     const {produtoId} = useParams()
     const [produto, setProduto] = useState()
-    const navigate = useNavigate()
+    const Navigate = useNavigate()
 
     useEffect(() => {
-    fetch("http://localhost/pj2/api/produto/select-by=id/?id=" + produtoId)
+    fetch("http://localhost/pj2/api/produto/select-by-id/?id=" + produtoId)
     .then((response) => {
     if (response.ok) {
     return response.json();
@@ -27,6 +27,9 @@ const ProdutoEdit = () => {
     formData.append('quantidade', event.target[1].value);
     formData.append('preco', event.target[2].value);
     formData.append('investimento', event.target[3].value);
+    formData.append('valortotal', ValorTotal);
+    formData.append('lucro',calculoLucro);
+
     fetch(
     "http://localhost/pj2/api/produto/update",
     {method: 'POST', body: formData}
@@ -34,7 +37,7 @@ const ProdutoEdit = () => {
     .then((response) => response.json())
     .then((data) => {
     if(data?.produto?.id){
-    navigate('/Contas');
+    Navigate('/Contas');
     //setpontos(clearUserValue)
     } else if(data?.message){
     alert(data.message)
