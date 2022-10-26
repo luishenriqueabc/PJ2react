@@ -85,27 +85,27 @@ const Planilha = () => {
                   <h2>NOME</h2>
                   <h4 to>{produto.nome}</h4>
               </div>
-              <div className="Quantidade" id='1'>
+              <div className="Quantidade">
                   <h2>QUANTIDADE</h2>
                   <h4>{produto.quantidade}</h4>
                 </div>
-              <div className="Preço" id='2'>
+              <div className="Preço">
                   <h2>PREÇO</h2>
                   <h4>R$ {produto.preco}</h4>
               </div>
-              <div className="Investimento" id='3'>
+              <div className="Investimento">
                   <h2>INVESTIMENTO</h2>
                   <h4>R$  {produto.investimento}</h4>
               </div>
-              <div className="ValorTotal" id='4'>
+              <div className="ValorTotal">
                   <h2>RETORNO TOTAL</h2>
                  <h4>R$ {produto.valortotal}</h4>
               </div>
-              <div className="Lucro" id='5'>
+              <div className="Lucro">
                   <h2>LUCRO</h2>
                   <h4>R$ {produto.lucro}</h4>
                   <button className='Delete' onClick={() => confirmAction(produto.id)}>Deletar</button>
-                  <button onClick={() => Navigate('/Edit/' + produto.id)}> Edit </button>
+                  <button onClick={() => Navigate('/Edit' + produto.id)}> Edit </button>
                   
               </div>
           </div>  
