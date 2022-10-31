@@ -3,6 +3,7 @@ import {BiArrowBack} from 'react-icons/bi'
 import { useNavigate } from 'react-router-dom';
 import { useRef, useState,useEffect} from 'react'
 import Planilha from '../components/Planilha';
+import swal from 'sweetalert';
 
 const Contas = () => {
   //Declaração das constantes.
@@ -57,7 +58,8 @@ const handleSubmit = (event) => {
     quantidadeRef.current.value = ''
     precoRef.current.value = ''
     investimentoRef.current.value = ''
-    alert(data.message)
+    swal("Muito Bem!", "Lucro Contabilizado", "success");
+  
     });
   }
   useEffect(() => {

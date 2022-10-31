@@ -1,0 +1,57 @@
+.Bg{
+    background: linear-gradient(-229deg, #070303d5, #95c0bcf3);
+    height: 1000px;
+}
+.EditarH1{
+  color:white;
+  text-align: center;
+  font-size: 95px;;
+  padding-left: 90px;
+  padding-bottom: 95px;;
+}
+.FormularioEdit{
+    text-align: center;
+    padding-top: 150px;
+}
+#Inputer::Placeholder{
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+}
+#Inputer{
+    border:0;
+    font-size:30px;
+    padding-left: 5px;; 
+    border-radius: 5px;;
+    padding-bottom: 10px;
+}
+.BotaoEdit #Inputer {
+   font-size:30px;
+   background-color: red;
+   color:white;
+   font-family: 'Inter', sans-serif;
+   border-radius: 20px 8px;;
+   padding-bottom: 5px;
+   margin-top: 50px;;
+   padding:0 20px;
+}
+.NomeEdit{
+  padding-right: 230px;;
+    font-size: 40px;;
+    color:white;
+}
+.QuantidadeEdit{
+    padding-right: 145px;;
+    font-size: 40px;;
+    color:white;
+}
+.PrecoEdit{
+    padding-right: 240px;;
+    font-size: 40px;;
+    color:white;
+}
+.InvestimentoEdit{
+    padding-right: 120px;;
+    font-size: 40px;;
+    color:white;
+}
+

@@ -2,7 +2,7 @@ import './Planilha.css';
 import { useState,useEffect } from 'react';
 import swal from 'sweetalert';
 import { useNavigate } from 'react-router-dom';
-import { useRef} from 'react'
+
 
 
 
@@ -27,18 +27,6 @@ const Planilha = () => {
   // })}
 // 
 
-
-
-
-let mensage = `O ${nome}, teve um valor total de R$${valorTotal}  e um lucro de R$${calculoLucro}`
-// Tranformando números em decimais
-let Decimais = calculoLucro.toLocaleString('pt-BR')
-let EmReais =  valorTotal.toLocaleString('pt-BR')
-
-console.log(mensage)
-//Atualizando Valores e mostrando na tela.
-setLucro(Decimais)
-setValor(EmReais)
 
     useEffect(() => {
       fetch("http://localhost/pj2/api/produto/select-all")
@@ -120,9 +108,10 @@ setValor(EmReais)
               <div className="Lucro">
                   <h2>LUCRO</h2>
                   <h4>R$ {produto.lucro}</h4>
+                  <div className='Botoes'>
                   <button className='Delete' onClick={() => confirmAction(produto.id)}>Deletar</button>
                   <button onClick={() => Navigate('/Edit/' + produto.id)}> Edit </button>
-                  
+                  </div>
               </div>
           </div>  
       </div>
