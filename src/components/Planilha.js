@@ -108,6 +108,7 @@ const Planilha = () => {
               <div className="Lucro">
                   <h2>LUCRO</h2>
                   <h4>R$ {produto.lucro}</h4>
+                  
                   <div className='Botoes'>
                   <button className='Delete' onClick={() => confirmAction(produto.id)}>Deletar</button>
                   <button onClick={() => Navigate('/Edit/' + produto.id)}> Edit </button>
